@@ -1,5 +1,36 @@
 # Git Operations Reference
 
+## 0. Configure Username and Email
+
+Git requires a name and email to associate with your commits.
+
+**Set globally (applies to all repositories on your machine):**
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+**Set locally (applies only to the current repository):**
+```bash
+git config user.name "Your Name"
+git config user.email "you@example.com"
+```
+
+**Verify your configuration:**
+```bash
+git config --global user.name
+git config --global user.email
+```
+
+**View all config settings:**
+```bash
+git config --list
+```
+
+> Local config overrides global config for that specific repository.
+
+---
+
 ## 1. Adding a Repository
 
 **Initialize a new local repository:**
@@ -116,6 +147,9 @@ git merge origin/<branch-name>   # apply when ready
 
 | Task | Command |
 |---|---|
+| Set username (global) | `git config --global user.name "Name"` |
+| Set email (global) | `git config --global user.email "email"` |
+| View config | `git config --list` |
 | Init repo | `git init` |
 | Clone repo | `git clone <url>` |
 | Add remote | `git remote add origin <url>` |
